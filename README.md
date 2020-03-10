@@ -7,6 +7,8 @@
 ## Contents at a Glance.
 * [About.](#about)
 * [Documentation.](#documentation)
+* [Commands.](#commands)
+* [Docker Image Registry.](#docker-image-registry)
 * [Help.](#help)
 
 
@@ -72,6 +74,16 @@
 * `docker stop containerID` Stop docker container.
 
 * `docker pause containerID` Pause docker container.
+
+
+
+
+
+## Docker Image Registry.
+* [DockerHub.]()
+* [AWS Container Registry (ECR).]()
+* [Google Container Registry.]()
+* [Azure Container Registry.]()
 
 
 
