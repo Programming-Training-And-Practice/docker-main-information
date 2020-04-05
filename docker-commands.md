@@ -12,6 +12,7 @@
 * [docker exec](#docker-exec)
 * [docker history](#docker-history)
 * [docker images](#docker-images)
+* [docker info](#docker-info)
 * [docker login](#docker-login)
 * [docker pull](#docker-pull)
 * [docker ps](#docker-ps)
@@ -82,7 +83,7 @@
 | docker run -v [absolutePathLocalMachineFolder]:[absolutePathContainerFolder]                                   | Run container and mount locale directory to container directory.                |
 | docker run -v [nameVolume]:[absolutePathContainerFolder]                                                       | Run container and mount docker volume to container directory.                   |
 | docker run -d -p 8282:8080 --name quarkusdocker quarkus/docker                                                 |                                                                                 |
-|                                                                             |                                                                                 |
+|                                                                                                                |                                                                                 |
 
 
 
@@ -95,6 +96,16 @@
 | docker images                                                               | List of locale docker images.                                                   |
 |                                                                             |                                                                                 |
 
+
+
+
+
+## docker info
+
+| Key/Command                                                                 | Description                                                                     |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| docker info                                                                 |                                                                                 |
+|                                                                             |                                                                                 |
 
 
 
