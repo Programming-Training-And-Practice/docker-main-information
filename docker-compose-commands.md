@@ -8,8 +8,6 @@
 * [About.](#about)
 * [Documentation.](#documentation)
 * [General Commands.](#general-commands)
-* [docker-compose down](#docker-compose-down)
-* [docker-compose up](#docker-compose-up)
 * [Help.](#help)
 
 
@@ -32,27 +30,14 @@
 
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-|                                                                             |                                                                                 |
-
-
-
-
-
-## docker-compose down
-
-| Key/Command                                                                 | Description                                                                     |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| docker-compose down                                                         |                                                                                 |
-
-
-
-
-
-## docker-compose up
-
-| Key/Command                                                                 | Description                                                                     |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| docker-compose version                                                      |                                                                                 |
+| docker-compose --version                                                    |                                                                                 |
+| docker-compose -v                                                           |                                                                                 |
+| docker-compose config                                                       |                                                                                 |
 | docker-compose up -d                                                        |                                                                                 |
+| docker-compose -f [yamlConfig] up                                           |                                                                                 |
+| docker-compose down                                                         |                                                                                 |
+|                                                                             |                                                                                 |
 
 
 
