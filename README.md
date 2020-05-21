@@ -7,6 +7,7 @@
 ## Contents at a Glance.
 * [About.](#about)
 * [Documentation.](#documentation)
+* [General.](#general)
 * [Docker Commands.](docker-commands.md)
 * [Docker Image Registry.](#docker-image-registry)
 * [Help.](#help)
@@ -28,7 +29,13 @@
 * [Docker Image.]()
 * [Dockerfile.]()
 * [DockerHub.]()
-* []()
+
+
+
+
+
+# General.
+* By default docker have root user.
 
 
 

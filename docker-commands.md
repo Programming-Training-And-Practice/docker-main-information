@@ -83,7 +83,12 @@
 | docker run -v [absolutePathLocalMachineFolder]:[absolutePathContainerFolder]                                   | Run container and mount locale directory to container directory.                |
 | docker run -v [nameVolume]:[absolutePathContainerFolder]                                                       | Run container and mount docker volume to container directory.                   |
 | docker run -d -p 8282:8080 --name quarkusdocker quarkus/docker                                                 |                                                                                 |
-|                                                                                                                |                                                                                 |
+| docker run --user=[nameUser] [nameImage]                                                                       | Run docker by not root user. Run docker by user "nameUser".                     |
+| docker run --cap-add MAC_ADMIN [nameImage]                                                                     |                                                                                 |
+| docker run --cap-add MAC_ADMIN [nameImage]                                                                     |                                                                                 |
+| docker run --cap-add KILL [nameImage]                                                                          |                                                                                 |
+| docker run --privileged [nameImage]                                                                            |                                                                                 |
+|                                                                             |                                                                                 |
 
 
 
