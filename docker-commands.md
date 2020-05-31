@@ -14,6 +14,7 @@
 * [docker images](#docker-images)
 * [docker info](#docker-info)
 * [docker login](#docker-login)
+* [docker logs](#docker-logs)
 * [docker pull](#docker-pull)
 * [docker ps](#docker-ps)
 * [docker pause](#docker-pause)
@@ -276,6 +277,16 @@
 | docker login                                                                |                                                                                 |
 |                                                                             |                                                                                 |
 
+
+
+
+
+## docker logs
+
+| Key/Command                                                                 | Description                                                                     |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| docker logs -f ecf                                                                             |                                                                                 |
+|                                                                             |                                                                                 |
 
 
 
