@@ -54,6 +54,7 @@
 | sudo usermod -aG docker $USER                                               |                                                                                 |
 |                                                                             |                                                                                 |
 
+`docker run --rm -d --name postgres-prod -p 5432:5432 -e POSTGRES_PASSWORD=strong_password -e POSTGRES_USER=developer -e POSTGRES_DB=user-service-db-prod postgres`
 
 
 
