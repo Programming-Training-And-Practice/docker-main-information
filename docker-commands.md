@@ -86,11 +86,12 @@
 | docker run -v [nameVolume]:[absolutePathContainerFolder]                                                       | Run container and mount docker volume to container directory.                   |
 | docker run -d -p 8282:8080 --name quarkusdocker quarkus/docker                                                 |                                                                                 |
 | docker run --user=[nameUser] [nameImage]                                                                       | Run docker by not root user. Run docker by user "nameUser".                     |
-| docker run --cap-add MAC_ADMIN [nameImage]                                                                     |                                                                                 |
-| docker run --cap-add MAC_ADMIN [nameImage]                                                                     |                                                                                 |
-| docker run --cap-add KILL [nameImage]                                                                          |                                                                                 |
-| docker run --privileged [nameImage]                                                                            |                                                                                 |
-|                                                                             |                                                                                 |
+| docker run --cap-add MAC_ADMIN [nameImage]                                                                     | Add capability MAC_ADMIN.                                                       |
+| docker run --cap-drop MAC_ADMIN [nameImage]                                                                    | Remove capability MAC_ADMIN.                                                    |
+| docker run --cap-add KILL [nameImage]                                                                          | Add capability KILL.                                                            |
+| docker run --privileged [nameImage]                                                                            | Enable all capabilities.                                                        |
+| docker run -d --name=[namePod] -p [localMachinePort]:[containerPort] --link [name]:[name] [nameImage]          |                                                                                 |
+|                                                                                                                |                                                                                 |
 
 
 
