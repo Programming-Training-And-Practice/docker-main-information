@@ -52,6 +52,7 @@
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | sudo systemctl status docker                                                |                                                                                 |
 | sudo usermod -aG docker $USER                                               |                                                                                 |
+| sudo du -sh /var/lib/docker                                                 |                                                                                 |
 |                                                                             |                                                                                 |
 
 `docker run --rm -d --name postgres-prod -p 5432:5432 -e POSTGRES_PASSWORD=strong_password -e POSTGRES_USER=developer -e POSTGRES_DB=user-service-db-prod postgres`
@@ -113,6 +114,7 @@
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker info                                                                 |                                                                                 |
+| docker info | grep -i root                                                  |                                                                                 |
 |                                                                             |                                                                                 |
 
 
@@ -200,6 +202,7 @@
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker rm [containerID]                                                     | Remove docker container.                                                        |
 | docker rm $(docker ps -qa)                                                  |                                                                                 |
+| docker rm $(docker ps -a -f status=exited -q)                               |                                                                                 |
 |                                                                             |                                                                                 |
 
 
@@ -228,6 +231,7 @@
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker exec -it [containerID] /bin/bash                                     | Enter to docker container to console.                                           |
+| docker exec -ti [nameContainer] bash                                        |                                                                                 |
 |                                                                             |                                                                                 |
 
 
@@ -287,6 +291,7 @@
 
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| docker logs -f [containerName]                                              |                                                                                 |
 | docker logs -f ecf                                                          |                                                                                 |
 |                                                                             |                                                                                 |
 
