@@ -7,6 +7,7 @@
 * [About.](#about)
 * [Documentation.](#documentation)
 * [General Commands.](#general-commands)
+* [Test Container.](#test-container)
 * [docker build](#docker-build)
 * [docker commit](#docker-commit)
 * [docker exec](#docker-exec)
@@ -57,6 +58,16 @@
 
 `docker run --rm -d --name postgres-prod -p 5432:5432 -e POSTGRES_PASSWORD=strong_password -e POSTGRES_USER=developer -e POSTGRES_DB=user-service-db-prod postgres`
 
+
+
+
+
+## Test Container.
+`docker run -ti --rm --memory=256m --cpus=2 openjdk:8u141-slim java -XX:+PrintFlagsFinal | grep MaxHeap`
+`docker run -ti --rm --memory=256m --cpus=2 openjdk java -XX:+PrintFlagsFinal | grep MaxHeap`
+
+`docker run -ti --rm --memory=256m --cpus=2 openjdk:8u141-slim java -XX:+PrintFlagsFinal | grep Thred`
+`docker run -ti --rm --memory=256m --cpus=2 openjdk java -XX:+PrintFlagsFinal | grep Thred`
 
 
 
