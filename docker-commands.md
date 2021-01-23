@@ -52,6 +52,7 @@
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | sudo systemctl status docker                                                |                                                                                 |
+| sudo systemctl restart docker                                               |                                                                                 |
 | sudo usermod -aG docker $USER                                               |                                                                                 |
 | sudo du -sh /var/lib/docker                                                 |                                                                                 |
 |                                                                             |                                                                                 |
