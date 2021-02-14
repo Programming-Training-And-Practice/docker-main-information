@@ -55,6 +55,7 @@
 | sudo systemctl restart docker                                               |                                                                                 |
 | sudo usermod -aG docker $USER                                               |                                                                                 |
 | sudo du -sh /var/lib/docker                                                 |                                                                                 |
+| docker system prune -af                                                     | Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.                                                                                |
 |                                                                             |                                                                                 |
 
 `docker run --rm -d --name postgres-prod -p 5432:5432 -e POSTGRES_PASSWORD=strong_password -e POSTGRES_USER=developer -e POSTGRES_DB=user-service-db-prod postgres`
