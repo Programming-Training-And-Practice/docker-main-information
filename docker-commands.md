@@ -55,7 +55,11 @@
 | sudo systemctl restart docker                                               |                                                                                 |
 | sudo usermod -aG docker $USER                                               |                                                                                 |
 | sudo du -sh /var/lib/docker                                                 |                                                                                 |
-| docker system prune -af                                                     | Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.                                                                                |
+| docker system prune                                                         |                                                                                 |
+| docker system prune -af --volumes                                           | Remove all unused containers, networks, images (both dangling and unreferenced), and volumes. |
+| docker system prune -a --filter “until=2m”                                  |                                                                                 |
+| docker system prune --filter “label=env=dev”                                | Remove the unused objects which have the label ‘env=dev’ by using the ‘–filter’ option |
+| docker system prune --filter “label!=env=dev”                               | Remove all the objects that do not meet the mentioned condition                 |
 |                                                                             |                                                                                 |
 
 `docker run --rm -d --name postgres-prod -p 5432:5432 -e POSTGRES_PASSWORD=strong_password -e POSTGRES_USER=developer -e POSTGRES_DB=user-service-db-prod postgres`
@@ -105,6 +109,7 @@
 | docker run --cap-add KILL [nameImage]                                                                          | Add capability KILL.                                                            |
 | docker run --privileged [nameImage]                                                                            | Enable all capabilities.                                                        |
 | docker run -d --name=[namePod] -p [localMachinePort]:[containerPort] --link [name]:[name] [nameImage]          |                                                                                 |
+| docker run --label key=value [nameImage]                                                                       |                                                                                 |
 |                                                                                                                |                                                                                 |
 
 
@@ -116,6 +121,7 @@
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker images                                                               | List of locale docker images.                                                   |
+| docker images ls                                                            | List of locale docker images.                                                   |
 |                                                                             |                                                                                 |
 
 
@@ -270,6 +276,7 @@
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker stop [containerID]                                                   | Stop docker container.                                                          |
 | docker stop [nameContainer]                                                 | Stop docker container.                                                          |
+| docker stop $(docker ps -qa)                                                |                                                                                 |
 |                                                                             |                                                                                 |
 
 
@@ -330,6 +337,7 @@
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker volume ls                                                            | Show docker volumes.                                                            |
 | docker volume create [nameVolume]                                           | Create docker volumes.                                                          |
+| docker system prune --volumes                                               | Delete all unused volumes                                                       |
 |                                                                             |                                                                                 |
 
 
@@ -341,8 +349,11 @@
 | Key/Command                                                                 | Description                                                                     |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | docker network create [nameNetwork]                                         |                                                                                 |
+| docker network create --label key=value [nameNetwork]                       |                                                                                 |
 | docker network connect [nameNetwork] [nameContainer]                        |                                                                                 |
 | docker network inspect [nameNetwork]                                        |                                                                                 |
+| docker network ls                                                           | Show docker networks                                                            |
+| docker network prune                                                        | Remove all unused networks                                                      |
 |                                                                             |                                                                                 |
 
 
